@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <form action="" method="post">
+        {% csrf_token %}
+        {{form }}
+
+        <button type="submit" value="submit" id="submit">submit</button>
+    </form>
+
+    {% if check == True %}
+        <p>El numero es <span>PAR</span> puedes elegir otro?</p>
+    {% else %}
+        <p>El numero es <span>IMPAR</span> puedes elegir otro?</p>
+    {% endif %}
+    
+</body>
+</html>
