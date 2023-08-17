@@ -3,22 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
+    <link rel="stylesheet" href="{% static "Css.css"%}">
     <title>Document</title>
 </head>
 <body>
+    <div class="container">
+        <div class="box">
+            <form action="" method="post">
+            {% csrf_token %}
+            {{form }}
     
-    <form action="" method="post">
-        {% csrf_token %}
-        {{form }}
-
-        <button type="submit" value="submit" id="submit">submit</button>
-    </form>
-
-    {% if check == True %}
-        <p>El numero es <span>PAR</span> puedes elegir otro?</p>
-    {% else %}
-        <p>El numero es <span>IMPAR</span> puedes elegir otro?</p>
-    {% endif %}
+            <button type="submit" value="submit" id="submit">submit</button>
+        </form>
+    
+        {% if check == True %}
+            <p class="ok">El numero es <span>PAR</span> puedes elegir otro?</p>
+        {% else %}
+            <p>El numero es <span>IMPAR</span> puedes elegir otro?</p>
+        {% endif %}
+        </div>
+    </div>
+    
     
 </body>
 </html>

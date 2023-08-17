@@ -1,0 +1,27 @@
+body, html {
+    height: 100%;
+    margin: 0;
+}
+
+.container {
+    background-color: aqua;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    
+    flex-direction: column;
+}
+
+.box {
+    border: 2px solid;
+    border-radius: 5px;
+    background-color:beige;
+    border-radius: 5px;
+    padding: 50px;
+}
+
+.title{
+    color: red;
+}
+
